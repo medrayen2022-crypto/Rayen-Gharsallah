@@ -112,19 +112,26 @@ function verifText(text) {
     emailjs.init("TON_PUBLIC_KEY"); // ← remplace par ta clé publique EmailJS
 })();
 
+// Initialisation
+(function(){
+    emailjs.init("TON_PUBLIC_KEY"); // remplace par ta clé publique EmailJS
+})();
+
 function envoyerMessage(e) {
-    e.preventDefault(); // empêche le rechargement de la page
+    e.preventDefault();
 
     let nom = document.getElementById("n").value;
     let mail = document.getElementById("m").value;
     let text = document.getElementById("t").value;
 
+    // Vérifications simples
     if (!verifNom(nom) || !verifMail(mail) || !verifText(text)) {
         alert("Vérifie les informations !");
         return;
     }
 
-    emailjs.send("TON_SERVICE_ID", "TON_TEMPLATE_ID", {
+    // Envoi du mail
+    emailjs.send("service_xsudljh", "jpq_oU8SPn-lmakQl", {
         name: nom,
         email: mail,
         message: text
