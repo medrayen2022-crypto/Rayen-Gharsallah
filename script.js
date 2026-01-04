@@ -131,7 +131,7 @@ function envoyerMessage(e) {
     }
 
     // Envoi du mail
-    emailjs.send("service_xsudljh", "jpq_oU8SPn-lmakQl", {
+    emailjs.send("service_xsudljh", "template_98uevbm", {
         name: nom,
         email: mail,
         message: text
