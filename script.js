@@ -107,14 +107,9 @@ function verifText(text) {
     return text.trim() !== "";
 }
 
-// boutton envoyer
+// EmailJS initialization
 (function(){
-    emailjs.init("TON_PUBLIC_KEY"); // ← remplace par ta clé publique EmailJS
-})();
-
-// Initialisation
-(function(){
-    emailjs.init("TON_PUBLIC_KEY"); // remplace par ta clé publique EmailJS
+    emailjs.init("jpq_oU8SPn-lmakQl");
 })();
 
 function envoyerMessage(e) {
