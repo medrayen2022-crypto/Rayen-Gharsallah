@@ -127,14 +127,14 @@ function envoyerMessage(e) {
     // Vérifications simples
     if (!verifNom(nom) || !verifMail(mail) || !verifText(text)) {
         alert("Vérifie les informations !");
-        return;
+        return false ;
     }
 
     // Envoi du mail
     emailjs.send("service_xsudljh", "template_98uevbm", {
         name: nom,
         email: mail,
-        message: text
+        message: text,
     })
     .then(() => {
         alert("Message envoyé avec succès ✅");
